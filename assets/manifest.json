@@ -1,0 +1,1335 @@
+{
+ "game": "Cat Pizza Tycoon",
+ "version": "3.0.0",
+ "pixelsPerTile": {
+  "objects": 144,
+  "characters": 128
+ },
+ "projection": "2:1 isometric; screen = ((x-y)*T/2, (x+y)*T/4 - z*T*0.56)",
+ "rules": [
+  "Replace a PNG with art of the SAME width/height and anchor; the loader only scales uniformly and reports size mismatches.",
+  "Character sheets: one row, frames in the order listed; f_ = facing camera, b_ = facing away; the game mirrors horizontally for the other two directions."
+ ],
+ "assets": [
+  {
+   "key": "cat_chef",
+   "type": "rig",
+   "group": "characters",
+   "file": "assets/characters/cat_chef_8dir.png",
+   "desc": "Chef Cat (player) — part rig, 8-direction preview (0..315°)",
+   "width": 1024,
+   "height": 186,
+   "anchor": [
+    64,
+    170.64
+   ]
+  },
+  {
+   "key": "cat_waiter",
+   "type": "rig",
+   "group": "characters",
+   "file": "assets/characters/cat_waiter_8dir.png",
+   "desc": "Waiter Cat — part rig, 8-direction preview (0..315°)",
+   "width": 1024,
+   "height": 186,
+   "anchor": [
+    64,
+    170.64
+   ]
+  },
+  {
+   "key": "cat_cashier",
+   "type": "rig",
+   "group": "characters",
+   "file": "assets/characters/cat_cashier_8dir.png",
+   "desc": "Cashier Cat — part rig, 8-direction preview (0..315°)",
+   "width": 1024,
+   "height": 186,
+   "anchor": [
+    64,
+    170.64
+   ]
+  },
+  {
+   "key": "cat_helper",
+   "type": "rig",
+   "group": "characters",
+   "file": "assets/characters/cat_helper_8dir.png",
+   "desc": "Kitchen Helper — part rig, 8-direction preview (0..315°)",
+   "width": 1024,
+   "height": 186,
+   "anchor": [
+    64,
+    170.64
+   ]
+  },
+  {
+   "key": "cat_manager",
+   "type": "rig",
+   "group": "characters",
+   "file": "assets/characters/cat_manager_8dir.png",
+   "desc": "Manager Cat — part rig, 8-direction preview (0..315°)",
+   "width": 1024,
+   "height": 186,
+   "anchor": [
+    64,
+    170.64
+   ]
+  },
+  {
+   "key": "cat_c_grey",
+   "type": "rig",
+   "group": "characters",
+   "file": "assets/characters/cat_c_grey_8dir.png",
+   "desc": "Customer (normal) — part rig, 8-direction preview (0..315°)",
+   "width": 1024,
+   "height": 186,
+   "anchor": [
+    64,
+    170.64
+   ]
+  },
+  {
+   "key": "cat_c_ginger",
+   "type": "rig",
+   "group": "characters",
+   "file": "assets/characters/cat_c_ginger_8dir.png",
+   "desc": "Customer (ginger) — part rig, 8-direction preview (0..315°)",
+   "width": 1024,
+   "height": 186,
+   "anchor": [
+    64,
+    170.64
+   ]
+  },
+  {
+   "key": "cat_c_tux",
+   "type": "rig",
+   "group": "characters",
+   "file": "assets/characters/cat_c_tux_8dir.png",
+   "desc": "Customer (tuxedo) — part rig, 8-direction preview (0..315°)",
+   "width": 1024,
+   "height": 186,
+   "anchor": [
+    64,
+    170.64
+   ]
+  },
+  {
+   "key": "cat_c_calico",
+   "type": "rig",
+   "group": "characters",
+   "file": "assets/characters/cat_c_calico_8dir.png",
+   "desc": "Customer (calico) — part rig, 8-direction preview (0..315°)",
+   "width": 1024,
+   "height": 186,
+   "anchor": [
+    64,
+    170.64
+   ]
+  },
+  {
+   "key": "cat_c_cream",
+   "type": "rig",
+   "group": "characters",
+   "file": "assets/characters/cat_c_cream_8dir.png",
+   "desc": "Customer (cream) — part rig, 8-direction preview (0..315°)",
+   "width": 1024,
+   "height": 186,
+   "anchor": [
+    64,
+    170.64
+   ]
+  },
+  {
+   "key": "cat_c_elder",
+   "type": "rig",
+   "group": "characters",
+   "file": "assets/characters/cat_c_elder_8dir.png",
+   "desc": "Customer (elder) — part rig, 8-direction preview (0..315°)",
+   "width": 1024,
+   "height": 186,
+   "anchor": [
+    64,
+    170.64
+   ]
+  },
+  {
+   "key": "cat_kid",
+   "type": "rig",
+   "group": "characters",
+   "file": "assets/characters/cat_kid_8dir.png",
+   "desc": "Customer (kid) — part rig, 8-direction preview (0..315°)",
+   "width": 1024,
+   "height": 186,
+   "anchor": [
+    64,
+    170.64
+   ]
+  },
+  {
+   "key": "cat_tourist",
+   "type": "rig",
+   "group": "characters",
+   "file": "assets/characters/cat_tourist_8dir.png",
+   "desc": "Customer (tourist) — part rig, 8-direction preview (0..315°)",
+   "width": 1024,
+   "height": 186,
+   "anchor": [
+    64,
+    170.64
+   ]
+  },
+  {
+   "key": "cat_vip",
+   "type": "rig",
+   "group": "characters",
+   "file": "assets/characters/cat_vip_8dir.png",
+   "desc": "Customer (VIP) — part rig, 8-direction preview (0..315°)",
+   "width": 1024,
+   "height": 186,
+   "anchor": [
+    64,
+    170.64
+   ]
+  },
+  {
+   "key": "it_pizza",
+   "type": "item",
+   "group": "items",
+   "file": "assets/items/it_pizza.png",
+   "desc": "Margherita",
+   "width": 72,
+   "height": 72,
+   "anchor": [
+    36,
+    58
+   ]
+  },
+  {
+   "key": "it_pepperoni",
+   "type": "item",
+   "group": "items",
+   "file": "assets/items/it_pepperoni.png",
+   "desc": "Pepperoni",
+   "width": 72,
+   "height": 72,
+   "anchor": [
+    36,
+    58
+   ]
+  },
+  {
+   "key": "it_veggie",
+   "type": "item",
+   "group": "items",
+   "file": "assets/items/it_veggie.png",
+   "desc": "Vegetarian",
+   "width": 72,
+   "height": 72,
+   "anchor": [
+    36,
+    58
+   ]
+  },
+  {
+   "key": "it_seafood",
+   "type": "item",
+   "group": "items",
+   "file": "assets/items/it_seafood.png",
+   "desc": "Seafood",
+   "width": 72,
+   "height": 72,
+   "anchor": [
+    36,
+    58
+   ]
+  },
+  {
+   "key": "it_special",
+   "type": "item",
+   "group": "items",
+   "file": "assets/items/it_special.png",
+   "desc": "Deluxe",
+   "width": 72,
+   "height": 72,
+   "anchor": [
+    36,
+    58
+   ]
+  },
+  {
+   "key": "it_raw_pizza",
+   "type": "item",
+   "group": "items",
+   "file": "assets/items/it_raw_pizza.png",
+   "desc": "raw Margherita",
+   "width": 72,
+   "height": 72,
+   "anchor": [
+    36,
+    58
+   ]
+  },
+  {
+   "key": "it_raw_pepperoni",
+   "type": "item",
+   "group": "items",
+   "file": "assets/items/it_raw_pepperoni.png",
+   "desc": "raw Pepperoni",
+   "width": 72,
+   "height": 72,
+   "anchor": [
+    36,
+    58
+   ]
+  },
+  {
+   "key": "it_raw_veggie",
+   "type": "item",
+   "group": "items",
+   "file": "assets/items/it_raw_veggie.png",
+   "desc": "raw Vegetarian",
+   "width": 72,
+   "height": 72,
+   "anchor": [
+    36,
+    58
+   ]
+  },
+  {
+   "key": "it_raw_seafood",
+   "type": "item",
+   "group": "items",
+   "file": "assets/items/it_raw_seafood.png",
+   "desc": "raw Seafood",
+   "width": 72,
+   "height": 72,
+   "anchor": [
+    36,
+    58
+   ]
+  },
+  {
+   "key": "it_raw_special",
+   "type": "item",
+   "group": "items",
+   "file": "assets/items/it_raw_special.png",
+   "desc": "raw Deluxe",
+   "width": 72,
+   "height": 72,
+   "anchor": [
+    36,
+    58
+   ]
+  },
+  {
+   "key": "it_ic_pizza",
+   "type": "item",
+   "group": "items",
+   "file": "assets/items/it_ic_pizza.png",
+   "desc": "order-bubble icon Margherita",
+   "width": 72,
+   "height": 72,
+   "anchor": [
+    36,
+    58
+   ]
+  },
+  {
+   "key": "it_ic_pepperoni",
+   "type": "item",
+   "group": "items",
+   "file": "assets/items/it_ic_pepperoni.png",
+   "desc": "order-bubble icon Pepperoni",
+   "width": 72,
+   "height": 72,
+   "anchor": [
+    36,
+    58
+   ]
+  },
+  {
+   "key": "it_ic_veggie",
+   "type": "item",
+   "group": "items",
+   "file": "assets/items/it_ic_veggie.png",
+   "desc": "order-bubble icon Vegetarian",
+   "width": 72,
+   "height": 72,
+   "anchor": [
+    36,
+    58
+   ]
+  },
+  {
+   "key": "it_ic_seafood",
+   "type": "item",
+   "group": "items",
+   "file": "assets/items/it_ic_seafood.png",
+   "desc": "order-bubble icon Seafood",
+   "width": 72,
+   "height": 72,
+   "anchor": [
+    36,
+    58
+   ]
+  },
+  {
+   "key": "it_ic_special",
+   "type": "item",
+   "group": "items",
+   "file": "assets/items/it_ic_special.png",
+   "desc": "order-bubble icon Deluxe",
+   "width": 72,
+   "height": 72,
+   "anchor": [
+    36,
+    58
+   ]
+  },
+  {
+   "key": "it_box",
+   "type": "item",
+   "group": "items",
+   "file": "assets/items/it_box.png",
+   "desc": "box",
+   "width": 72,
+   "height": 72,
+   "anchor": [
+    36,
+    58
+   ]
+  },
+  {
+   "key": "it_drink",
+   "type": "item",
+   "group": "items",
+   "file": "assets/items/it_drink.png",
+   "desc": "Cat Cola",
+   "width": 72,
+   "height": 72,
+   "anchor": [
+    36,
+    58
+   ]
+  },
+  {
+   "key": "it_dessert",
+   "type": "item",
+   "group": "items",
+   "file": "assets/items/it_dessert.png",
+   "desc": "Berry Cake",
+   "width": 72,
+   "height": 72,
+   "anchor": [
+    36,
+    58
+   ]
+  },
+  {
+   "key": "it_ing",
+   "type": "item",
+   "group": "items",
+   "file": "assets/items/it_ing.png",
+   "desc": "Ingredients",
+   "width": 72,
+   "height": 72,
+   "anchor": [
+    36,
+    58
+   ]
+  },
+  {
+   "key": "it_trash",
+   "type": "item",
+   "group": "items",
+   "file": "assets/items/it_trash.png",
+   "desc": "Dirty plate",
+   "width": 72,
+   "height": 72,
+   "anchor": [
+    36,
+    58
+   ]
+  },
+  {
+   "key": "it_coin",
+   "type": "item",
+   "group": "items",
+   "file": "assets/items/it_coin.png",
+   "desc": "coin",
+   "width": 72,
+   "height": 72,
+   "anchor": [
+    36,
+    58
+   ]
+  },
+  {
+   "key": "em_heart",
+   "type": "emote",
+   "group": "ui",
+   "file": "assets/ui/em_heart.png",
+   "desc": "emote heart",
+   "width": 52,
+   "height": 58,
+   "anchor": [
+    26,
+    55
+   ]
+  },
+  {
+   "key": "em_anger",
+   "type": "emote",
+   "group": "ui",
+   "file": "assets/ui/em_anger.png",
+   "desc": "emote anger",
+   "width": 52,
+   "height": 58,
+   "anchor": [
+    26,
+    55
+   ]
+  },
+  {
+   "key": "em_sweat",
+   "type": "emote",
+   "group": "ui",
+   "file": "assets/ui/em_sweat.png",
+   "desc": "emote sweat",
+   "width": 52,
+   "height": 58,
+   "anchor": [
+    26,
+    55
+   ]
+  },
+  {
+   "key": "em_zzz",
+   "type": "emote",
+   "group": "ui",
+   "file": "assets/ui/em_zzz.png",
+   "desc": "emote zzz",
+   "width": 52,
+   "height": 58,
+   "anchor": [
+    26,
+    55
+   ]
+  },
+  {
+   "key": "em_sparkle",
+   "type": "emote",
+   "group": "ui",
+   "file": "assets/ui/em_sparkle.png",
+   "desc": "emote sparkle",
+   "width": 52,
+   "height": 58,
+   "anchor": [
+    26,
+    55
+   ]
+  },
+  {
+   "key": "em_bang",
+   "type": "emote",
+   "group": "ui",
+   "file": "assets/ui/em_bang.png",
+   "desc": "emote bang",
+   "width": 52,
+   "height": 58,
+   "anchor": [
+    26,
+    55
+   ]
+  },
+  {
+   "key": "em_check",
+   "type": "emote",
+   "group": "ui",
+   "file": "assets/ui/em_check.png",
+   "desc": "emote check",
+   "width": 52,
+   "height": 58,
+   "anchor": [
+    26,
+    55
+   ]
+  },
+  {
+   "key": "ctr_tray",
+   "type": "iso",
+   "group": "restaurant",
+   "file": "assets/restaurant/ctr_tray.png",
+   "desc": "ctr_tray",
+   "width": 216,
+   "height": 225,
+   "anchor": [
+    108,
+    116.64
+   ],
+   "footprintTiles": [
+    1,
+    1
+   ],
+   "hotspots": {
+    "top": [
+     0.5,
+     0.5,
+     0.79
+    ]
+   }
+  },
+  {
+   "key": "ctr_shelf",
+   "type": "iso",
+   "group": "restaurant",
+   "file": "assets/restaurant/ctr_shelf.png",
+   "desc": "ctr_shelf",
+   "width": 216,
+   "height": 225,
+   "anchor": [
+    108,
+    116.64
+   ],
+   "footprintTiles": [
+    1,
+    1
+   ],
+   "hotspots": {
+    "top": [
+     0.5,
+     0.5,
+     0.81
+    ]
+   }
+  },
+  {
+   "key": "ctr_plant",
+   "type": "iso",
+   "group": "restaurant",
+   "file": "assets/restaurant/ctr_plant.png",
+   "desc": "ctr_plant",
+   "width": 216,
+   "height": 249,
+   "anchor": [
+    108,
+    140.83
+   ],
+   "footprintTiles": [
+    1,
+    1
+   ]
+  },
+  {
+   "key": "ctr_register",
+   "type": "iso",
+   "group": "restaurant",
+   "file": "assets/restaurant/ctr_register.png",
+   "desc": "ctr_register",
+   "width": 216,
+   "height": 257,
+   "anchor": [
+    108,
+    148.9
+   ],
+   "footprintTiles": [
+    1,
+    1
+   ]
+  },
+  {
+   "key": "ctr_boxes",
+   "type": "iso",
+   "group": "restaurant",
+   "file": "assets/restaurant/ctr_boxes.png",
+   "desc": "ctr_boxes",
+   "width": 216,
+   "height": 249,
+   "anchor": [
+    108,
+    140.83
+   ],
+   "footprintTiles": [
+    1,
+    1
+   ]
+  },
+  {
+   "key": "stanchion",
+   "type": "iso",
+   "group": "restaurant",
+   "file": "assets/restaurant/stanchion.png",
+   "desc": "stanchion",
+   "width": 116,
+   "height": 191,
+   "anchor": [
+    57.6,
+    132.77
+   ],
+   "footprintTiles": [
+    0.3,
+    0.3
+   ]
+  },
+  {
+   "key": "st_oven",
+   "type": "iso",
+   "group": "stations",
+   "file": "assets/stations/st_oven.png",
+   "desc": "st_oven",
+   "width": 288,
+   "height": 326,
+   "anchor": [
+    136.8,
+    181.15
+   ],
+   "footprintTiles": [
+    1.6,
+    1.4
+   ],
+   "hotspots": {
+    "top": [
+     1.33,
+     0.7,
+     0.53
+    ],
+    "glow": [
+     0.92,
+     0.7,
+     0.62
+    ]
+   }
+  },
+  {
+   "key": "st_drink",
+   "type": "iso",
+   "group": "stations",
+   "file": "assets/stations/st_drink.png",
+   "desc": "st_drink",
+   "width": 245,
+   "height": 288,
+   "anchor": [
+    122.4,
+    165.02
+   ],
+   "footprintTiles": [
+    1.2,
+    1.2
+   ],
+   "hotspots": {
+    "top": [
+     0.98,
+     0.6,
+     0.48
+    ]
+   }
+  },
+  {
+   "key": "st_pantry",
+   "type": "iso",
+   "group": "stations",
+   "file": "assets/stations/st_pantry.png",
+   "desc": "st_pantry",
+   "width": 274,
+   "height": 327,
+   "anchor": [
+    136.8,
+    189.22
+   ],
+   "footprintTiles": [
+    1.4,
+    1.4
+   ],
+   "hotspots": {
+    "top": [
+     1.1,
+     0.7,
+     0.08
+    ]
+   }
+  },
+  {
+   "key": "st_prep",
+   "type": "iso",
+   "group": "stations",
+   "file": "assets/stations/st_prep.png",
+   "desc": "st_prep",
+   "width": 260,
+   "height": 263,
+   "anchor": [
+    122.4,
+    132.77
+   ],
+   "footprintTiles": [
+    1.4,
+    1.2
+   ],
+   "hotspots": {
+    "top": [
+     1.18,
+     0.6,
+     0.48
+    ],
+    "board": [
+     0.42,
+     0.47,
+     0.69
+    ]
+   }
+  },
+  {
+   "key": "st_veggie",
+   "type": "iso",
+   "group": "stations",
+   "file": "assets/stations/st_veggie.png",
+   "desc": "st_veggie",
+   "width": 260,
+   "height": 263,
+   "anchor": [
+    122.4,
+    132.77
+   ],
+   "footprintTiles": [
+    1.4,
+    1.2
+   ],
+   "hotspots": {
+    "top": [
+     1.18,
+     0.6,
+     0.48
+    ],
+    "board": [
+     0.42,
+     0.47,
+     0.69
+    ]
+   }
+  },
+  {
+   "key": "st_seafood",
+   "type": "iso",
+   "group": "stations",
+   "file": "assets/stations/st_seafood.png",
+   "desc": "st_seafood",
+   "width": 260,
+   "height": 271,
+   "anchor": [
+    122.4,
+    140.83
+   ],
+   "footprintTiles": [
+    1.4,
+    1.2
+   ],
+   "hotspots": {
+    "top": [
+     1.18,
+     0.6,
+     0.48
+    ]
+   }
+  },
+  {
+   "key": "st_dessert",
+   "type": "iso",
+   "group": "stations",
+   "file": "assets/stations/st_dessert.png",
+   "desc": "st_dessert",
+   "width": 245,
+   "height": 264,
+   "anchor": [
+    115.2,
+    140.83
+   ],
+   "footprintTiles": [
+    1.3,
+    1.1
+   ],
+   "hotspots": {
+    "top": [
+     1.08,
+     0.55,
+     0.48
+    ]
+   }
+  },
+  {
+   "key": "st_special",
+   "type": "iso",
+   "group": "stations",
+   "file": "assets/stations/st_special.png",
+   "desc": "st_special",
+   "width": 317,
+   "height": 388,
+   "anchor": [
+    151.2,
+    229.54
+   ],
+   "footprintTiles": [
+    1.8,
+    1.6
+   ],
+   "hotspots": {
+    "top": [
+     1.55,
+     0.8,
+     0.53
+    ],
+    "glow": [
+     1.2,
+     0.8,
+     0.68
+    ]
+   }
+  },
+  {
+   "key": "table",
+   "type": "iso",
+   "group": "restaurant",
+   "file": "assets/restaurant/table.png",
+   "desc": "table",
+   "width": 252,
+   "height": 235,
+   "anchor": [
+    108,
+    108.58
+   ],
+   "footprintTiles": [
+    1.5,
+    1
+   ],
+   "hotspots": {
+    "top": [
+     0.75,
+     0.5,
+     0.55
+    ]
+   }
+  },
+  {
+   "key": "table4p",
+   "type": "iso",
+   "group": "restaurant",
+   "file": "assets/restaurant/table4p.png",
+   "desc": "table4p",
+   "width": 252,
+   "height": 235,
+   "anchor": [
+    108,
+    108.58
+   ],
+   "footprintTiles": [
+    1.5,
+    1
+   ],
+   "hotspots": {
+    "top": [
+     0.75,
+     0.5,
+     0.56
+    ]
+   }
+  },
+  {
+   "key": "chairL",
+   "type": "iso",
+   "group": "restaurant",
+   "file": "assets/restaurant/chairL.png",
+   "desc": "chairL",
+   "width": 144,
+   "height": 189,
+   "anchor": [
+    72,
+    116.64
+   ],
+   "footprintTiles": [
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "key": "chairT",
+   "type": "iso",
+   "group": "restaurant",
+   "file": "assets/restaurant/chairT.png",
+   "desc": "chairT",
+   "width": 144,
+   "height": 189,
+   "anchor": [
+    72,
+    116.64
+   ],
+   "footprintTiles": [
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "key": "chair_seat",
+   "type": "iso",
+   "group": "restaurant",
+   "file": "assets/restaurant/chair_seat.png",
+   "desc": "chair_seat",
+   "width": 144,
+   "height": 149,
+   "anchor": [
+    72,
+    76.32
+   ],
+   "footprintTiles": [
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "key": "chair_backR",
+   "type": "iso",
+   "group": "restaurant",
+   "file": "assets/restaurant/chair_backR.png",
+   "desc": "chair_backR",
+   "width": 144,
+   "height": 189,
+   "anchor": [
+    72,
+    116.64
+   ],
+   "footprintTiles": [
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "key": "chair_backB",
+   "type": "iso",
+   "group": "restaurant",
+   "file": "assets/restaurant/chair_backB.png",
+   "desc": "chair_backB",
+   "width": 144,
+   "height": 189,
+   "anchor": [
+    72,
+    116.64
+   ],
+   "footprintTiles": [
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "key": "vip",
+   "type": "iso",
+   "group": "restaurant",
+   "file": "assets/restaurant/vip.png",
+   "desc": "vip",
+   "width": 332,
+   "height": 307,
+   "anchor": [
+    136.8,
+    140.83
+   ],
+   "footprintTiles": [
+    2.2,
+    1.4
+   ],
+   "hotspots": {
+    "top": [
+     1.15,
+     0.7,
+     0.57
+    ]
+   }
+  },
+  {
+   "key": "vip_backR",
+   "type": "iso",
+   "group": "restaurant",
+   "file": "assets/restaurant/vip_backR.png",
+   "desc": "vip_backR",
+   "width": 332,
+   "height": 307,
+   "anchor": [
+    136.8,
+    140.83
+   ],
+   "footprintTiles": [
+    2.2,
+    1.4
+   ]
+  },
+  {
+   "key": "bin",
+   "type": "iso",
+   "group": "restaurant",
+   "file": "assets/restaurant/bin.png",
+   "desc": "bin",
+   "width": 188,
+   "height": 211,
+   "anchor": [
+    93.6,
+    116.64
+   ],
+   "footprintTiles": [
+    0.8,
+    0.8
+   ]
+  },
+  {
+   "key": "office",
+   "type": "iso",
+   "group": "restaurant",
+   "file": "assets/restaurant/office.png",
+   "desc": "office",
+   "width": 468,
+   "height": 391,
+   "anchor": [
+    223.2,
+    156.96
+   ],
+   "footprintTiles": [
+    2.9,
+    2.6
+   ]
+  },
+  {
+   "key": "dc_planter",
+   "type": "iso",
+   "group": "restaurant",
+   "file": "assets/restaurant/dc_planter.png",
+   "desc": "dc_planter",
+   "width": 202,
+   "height": 226,
+   "anchor": [
+    79.2,
+    124.7
+   ],
+   "footprintTiles": [
+    1.2,
+    0.6
+   ]
+  },
+  {
+   "key": "dc_board",
+   "type": "iso",
+   "group": "restaurant",
+   "file": "assets/restaurant/dc_board.png",
+   "desc": "dc_board",
+   "width": 166,
+   "height": 224,
+   "anchor": [
+    79.2,
+    140.83
+   ],
+   "footprintTiles": [
+    0.7,
+    0.6
+   ]
+  },
+  {
+   "key": "dc_plant",
+   "type": "iso",
+   "group": "restaurant",
+   "file": "assets/restaurant/dc_plant.png",
+   "desc": "dc_plant",
+   "width": 202,
+   "height": 282,
+   "anchor": [
+    100.8,
+    181.15
+   ],
+   "footprintTiles": [
+    0.9,
+    0.9
+   ]
+  },
+  {
+   "key": "grand",
+   "type": "iso",
+   "group": "restaurant",
+   "file": "assets/restaurant/grand.png",
+   "desc": "grand",
+   "width": 303,
+   "height": 403,
+   "anchor": [
+    129.6,
+    251.14
+   ],
+   "footprintTiles": [
+    1.6,
+    1
+   ]
+  },
+  {
+   "key": "ribbon",
+   "type": "iso",
+   "group": "restaurant",
+   "file": "assets/restaurant/ribbon.png",
+   "desc": "ribbon",
+   "width": 260,
+   "height": 263,
+   "anchor": [
+    108,
+    132.77
+   ],
+   "footprintTiles": [
+    1.6,
+    1
+   ]
+  },
+  {
+   "key": "rail_x",
+   "type": "iso",
+   "group": "restaurant",
+   "file": "assets/restaurant/rail_x.png",
+   "desc": "rail_x",
+   "width": 153,
+   "height": 185,
+   "anchor": [
+    44.64,
+    108.58
+   ],
+   "footprintTiles": [
+    1,
+    0.12
+   ]
+  },
+  {
+   "key": "rail_y",
+   "type": "iso",
+   "group": "restaurant",
+   "file": "assets/restaurant/rail_y.png",
+   "desc": "rail_y",
+   "width": 153,
+   "height": 185,
+   "anchor": [
+    108,
+    108.58
+   ],
+   "footprintTiles": [
+    0.12,
+    1
+   ]
+  },
+  {
+   "key": "lock_sign",
+   "type": "iso",
+   "group": "restaurant",
+   "file": "assets/restaurant/lock_sign.png",
+   "desc": "lock_sign",
+   "width": 137,
+   "height": 218,
+   "anchor": [
+    57.6,
+    148.9
+   ],
+   "footprintTiles": [
+    0.6,
+    0.3
+   ]
+  },
+  {
+   "key": "gd_tree",
+   "type": "iso",
+   "group": "outdoor",
+   "file": "assets/outdoor/gd_tree.png",
+   "desc": "gd_tree",
+   "width": 288,
+   "height": 458,
+   "anchor": [
+    144,
+    313.92
+   ],
+   "footprintTiles": [
+    1,
+    1
+   ]
+  },
+  {
+   "key": "gd_bush",
+   "type": "iso",
+   "group": "outdoor",
+   "file": "assets/outdoor/gd_bush.png",
+   "desc": "gd_bush",
+   "width": 188,
+   "height": 211,
+   "anchor": [
+    93.6,
+    116.64
+   ],
+   "footprintTiles": [
+    0.8,
+    0.8
+   ]
+  },
+  {
+   "key": "gd_lamp",
+   "type": "iso",
+   "group": "outdoor",
+   "file": "assets/outdoor/gd_lamp.png",
+   "desc": "gd_lamp",
+   "width": 144,
+   "height": 318,
+   "anchor": [
+    72,
+    245.66
+   ],
+   "footprintTiles": [
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "key": "gd_bench",
+   "type": "iso",
+   "group": "outdoor",
+   "file": "assets/outdoor/gd_bench.png",
+   "desc": "gd_bench",
+   "width": 191,
+   "height": 196,
+   "anchor": [
+    68.4,
+    100.51
+   ],
+   "footprintTiles": [
+    1.2,
+    0.45
+   ]
+  },
+  {
+   "key": "gd_flowers",
+   "type": "iso",
+   "group": "outdoor",
+   "file": "assets/outdoor/gd_flowers.png",
+   "desc": "gd_flowers",
+   "width": 188,
+   "height": 178,
+   "anchor": [
+    93.6,
+    84.38
+   ],
+   "footprintTiles": [
+    0.8,
+    0.8
+   ]
+  },
+  {
+   "key": "gd_pot",
+   "type": "iso",
+   "group": "outdoor",
+   "file": "assets/outdoor/gd_pot.png",
+   "desc": "gd_pot",
+   "width": 159,
+   "height": 212,
+   "anchor": [
+    79.2,
+    132.77
+   ],
+   "footprintTiles": [
+    0.6,
+    0.6
+   ]
+  }
+ ]
+}

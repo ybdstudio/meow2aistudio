@@ -1,0 +1,11 @@
+# build output (published on the release/* and web-build branches)
+dist/
+*.zip
+# credentials: copy src/native/hs-config.example.json -> hs-config.json
+src/native/hs-config.json
+# test screenshots / scratch
+qa*/
+qa_*.png
+__pycache__/
+node_modules/
+.DS_Store

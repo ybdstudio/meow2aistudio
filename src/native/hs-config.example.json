@@ -1,0 +1,13 @@
+{
+  "gameId": "YOUR_TIKTOK_APP_ID",
+  "sdkKey": "sk_live_...",
+  "placements": [
+    {"label": "Double Task Bonus", "ads": [{"id": "ad..."}]},
+    {"label": "Buying Pad", "ads": [{"id": "ad..."}]},
+    {"label": "Meow Rush", "ads": [{"id": "ad..."}]},
+    {"label": "VIP tip", "ads": [{"id": "ad..."}]},
+    {"label": "Coin Purchase", "ads": [{"id": "ad..."}]},
+    {"label": "Grand Opening", "ads": [{"id": "ad..."}]},
+    {"label": "Grill Break", "ads": [{"id": "ad..."}]}
+  ]
+}
